@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wfht@700&display=swap");
+
+.cursive{
+  font-family: "Amatic SC", cursive;
+  font-weight: 400;
+}
 .pros img {
   margin-left: auto;
   margin-right:auto;

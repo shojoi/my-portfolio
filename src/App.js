@@ -1,24 +1,28 @@
-
-import { BrowserRouter,Route, Routes } from "react-router-dom";
+import React from 'react'
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import SinglePost from './components/SinglePost';
 import Post from './components/Post';
 import Project from './components/Project';
+import Navbar from './components/Navbar';
+
+const App = () => {
+    return (
+
+        <BrowserRouter>
+            <Navbar />
+            <Routes>
+                <Route element={<Home />} path="/"></Route>
+                <Route element={<About />} path='/about'></Route>
+                <Route element={<SinglePost />} path='/post/:slug'></Route>
+                <Route element={<Post />} path='/post'></Route>
+                <Route element={<Project />} path='/project'></Route>
+            </Routes>
+        </BrowserRouter>
 
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route component={Home} path='/' exact/>
-        <Route component={About} path='/about' />
-        <Route component={SinglePost} path='/post/:slug' />
-        <Route component={Post} path='/post' />
-        <Route component={Project} path='/project' />
-      </Routes>
-    </BrowserRouter>
-  );
+    )
 }
 
-export default App;
+export default App
