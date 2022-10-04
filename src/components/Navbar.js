@@ -3,6 +3,7 @@ import cx from 'classnames';
 
 
 import { NavLink } from 'react-router-dom'
+import { SocialIcon } from 'react-social-icons';
 
 function Navbar() {
     return (
@@ -46,8 +47,8 @@ function Navbar() {
                         About Me
                     </NavLink>
                 </nav>
-                <div>
-
+                <div className='inline-flex py-3 px-3 my-6'>
+                    <SocialIcon url="https://linkedin.com/in/shobha-joshi-a3583014" className="mr-4" target="_blank" fgColor='#fff' style={{ height: 35, width: 35 }} />
                 </div>
             </div>
         </header>
