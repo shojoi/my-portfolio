@@ -7,7 +7,7 @@ import { SocialIcon } from 'react-social-icons';
 
 function Navbar() {
     return (
-        <header className='bg-red-700 text-grey'>
+        <header className='bg-green-800 text-grey'>
             <div className='container mx-auto flex justify-between'>
                 <nav className='flex'>
                     <NavLink to="/"
@@ -18,8 +18,8 @@ function Navbar() {
                     <NavLink to="/post"
                         className={({ isActive }) =>
 
-                            cx('inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800', {
-                                'bg-red-900': isActive
+                            cx('inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-red-800', {
+                                'bg-red-600': isActive
                             })
                         }
                     >
@@ -28,8 +28,8 @@ function Navbar() {
                     <NavLink to="/project"
                         className={({ isActive }) =>
 
-                            cx('inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800', {
-                                'bg-red-900': isActive
+                            cx('inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-red-800', {
+                                'bg-red-600': isActive
                             })
                         }
                     >
@@ -39,8 +39,8 @@ function Navbar() {
                         to="/about"
                         className={({ isActive }) =>
 
-                            cx('inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800', {
-                                'bg-red-900': isActive
+                            cx('inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-red-800', {
+                                'bg-red-600': isActive
                             })
                         }
                     >
