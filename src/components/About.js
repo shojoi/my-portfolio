@@ -42,7 +42,7 @@ function About() {
               </h1>
               <div className="prox lg:prox-xl text-white">
                 <BlockContent
-                  block={author.bio}
+                  blocks={author.bio}
                   projectId="r99w5jgb"
                   dataset="production"
                 />
