@@ -10,17 +10,21 @@ function urlFor(source) {
   return builder.image(source)
 }
 function About() {
-  const [author, setAuthor] = useState(null)
-  sanityClient
-    .fetch(
-      `*[_type =="author"]{
+  const [author, setAuthor] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type =="author"]{
     name,
     bio,
     "authorImage":image.asset->url
   }`,
-    )
-    .then((data) => setAuthor(data[0]))
-    .catch((error) => console.log(error))
+      )
+      .then((data) => setAuthor(data[0]))
+      .catch((error) => console.log(error))
+  }, [])
+
 
   if (!author) return <div> Loading...</div>
 

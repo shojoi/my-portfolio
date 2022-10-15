@@ -55,7 +55,6 @@ function Post() {
         </div>
       </section>
     </main>
-
   )
 }
 
